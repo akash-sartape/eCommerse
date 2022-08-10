@@ -1,0 +1,89 @@
+.container {
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 50px;
+    z-index: 1;
+}
+
+.itemcart {
+    border: 1px solid black;
+    margin: 2px;
+    padding: 2px;
+    -webkit-box-shadow: 10px 10px 35px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 35px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 35px -7px rgba(0, 0, 0, 0.75);
+}
+
+h4 {
+    margin-top: 0;
+}
+
+button {
+    margin: 5px;
+}
+
+img {
+    height: 120px;
+    width: 180px;
+}
+
+.cartbutton {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+.searchbox{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.paginationbutton {
+    position: absolute;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    margin-top: 1%;
+    right: 5%;
+}
+
+.paginationbutton a {
+    cursor: pointer;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.paginationActive {
+    color: #2DA5FC;
+    opacity: 1;
+}
+
+.previousbutton,
+.nextbutton {
+    color: black;
+    opacity: 1;
+}
+
+.paginationDisabled {
+    opacity: 0.5;
+
+}
+.container::before,.container::after{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    display: block;
+    content:  attr(popupdata);
+    background: white;  
+    height: 200px;
+    width: 300px;
+    visibility: hidden;
+    margin-left: 600px;
+    margin-top:-250px;
+    z-index: 2;
+    padding: 5px;
+    border: 1px solid black;
+}
+.container:hover::after{
+    visibility: visible;
+}
